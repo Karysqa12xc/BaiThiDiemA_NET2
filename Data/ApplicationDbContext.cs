@@ -9,9 +9,12 @@ namespace NVHN_0461.Data
 {
     public class ApplicationDbcontext : DbContext
     {
+        public virtual DbSet<Wallet> Wallets { get; set; }
+        
+        public virtual DbSet<User> Users { get; set; }
         public ApplicationDbcontext(DbContextOptions<ApplicationDbcontext> options): base(options)
         {} 
-        public DbSet<Wallet> Wallets { get; set; }
+        
         
         
     }
